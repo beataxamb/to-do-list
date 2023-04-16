@@ -9,3 +9,11 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+.list__item {
+    text-decoration: none;
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}
