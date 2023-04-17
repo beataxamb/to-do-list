@@ -6,8 +6,11 @@ html {
     box-sizing: inherit;
 }
 
-body {
+.body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .list__item {
