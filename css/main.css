@@ -1,0 +1,41 @@
+.main {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    align-items: start;
+    justify-items: start;
+}
+
+.main__section {
+    width: 100%;
+}
+
+.main__container {
+    margin: 2px;
+    padding: 20px;
+    background: white;
+}
+
+.main__container--form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__input {
+    border: 2px solid #eee;
+    padding: 10px;
+    margin: 10px;
+    flex-basis: 700px;
+}
+
+.main__input--button {
+    border: 2px solid teal;
+    background-color: teal;
+    color: white;
+    flex-basis: 150px;
+    flex-shrink: 0;
+
+}

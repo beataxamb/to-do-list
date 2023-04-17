@@ -15,6 +15,7 @@ html {
 
 .list__item {
     text-decoration: none;
+    list-style: none;
 }
 
 .list__item--done {
