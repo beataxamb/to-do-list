@@ -22,20 +22,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .main__input {
     border: 2px solid #eee;
     padding: 10px;
     margin: 10px;
-    flex-basis: 700px;
+    flex-basis: 80%;
+    flex-shrink: 1;
 }
 
-.main__input--button {
+.main__button {
     border: 2px solid teal;
+    padding: 10px;
+    margin: 10px;
     background-color: teal;
     color: white;
-    flex-basis: 150px;
+    flex-basis: 15%;
     flex-shrink: 0;
+}
 
+@media (max-width: 767px) {
+    .main__section {
+        width: 90%;
+    };
 }
