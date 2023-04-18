@@ -19,18 +19,14 @@
 }
 
 .main__container--form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto;
 }
 
 .main__input {
     border: 2px solid #eee;
     padding: 10px;
     margin: 10px;
-    flex-basis: 80%;
-    flex-shrink: 1;
 }
 
 .main__button {
@@ -39,12 +35,10 @@
     margin: 10px;
     background-color: teal;
     color: white;
-    flex-basis: 15%;
-    flex-shrink: 0;
 }
 
 @media (max-width: 767px) {
-    .main__section {
-        width: 90%;
-    };
+    .main__container--form {
+        grid-template-columns: 1fr;
+    }
 }
