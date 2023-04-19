@@ -12,12 +12,3 @@ html {
     max-width: 1000px;
     margin: 0 auto;
 }
-
-.list__item {
-    text-decoration: none;
-    list-style: none;
-}
-
-.list__item--done {
-    text-decoration: line-through;
-}

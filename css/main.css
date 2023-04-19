@@ -23,6 +23,12 @@
     grid-template-columns: 1fr auto;
 }
 
+@media (max-width: 767px) {
+    .main__container--form {
+        grid-template-columns: 1fr;
+    }
+}
+
 .main__input {
     border: 2px solid #eee;
     padding: 10px;
@@ -35,10 +41,4 @@
     margin: 10px;
     background-color: teal;
     color: white;
-}
-
-@media (max-width: 767px) {
-    .main__container--form {
-        grid-template-columns: 1fr;
-    }
 }

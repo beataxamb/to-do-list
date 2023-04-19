@@ -1,0 +1,29 @@
+.list__item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    justify-items: start;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    grid-template-areas: 
+    "start center end";
+    border-bottom: 2px solid #eee;
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}
+
+.button {
+    border: none;
+    background-color: green;
+    color: white;
+    min-width: 30px;
+    min-height: 30px;
+    margin: 10px;
+}
+
+.button--remove {
+    background-color: red;
+    grid-area: end;
+}
