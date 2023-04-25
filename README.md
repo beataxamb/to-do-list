@@ -1,14 +1,14 @@
 # TO-DO LIST
 
-##Demo
+## Demo
 
 https://beataxamb.github.io/to-do-list/
 
-##About this project
+## About this project
 
 This page allows you to manage the tasks you have to do.
 
-###**How to use it ?** 
+### **How to use it ?** 
 
 -You can add your new task in the main pane.
 -If you have completed the task, you can mark them as completed with the green button. The task will then be crossed out, but you will still see it on your list.
