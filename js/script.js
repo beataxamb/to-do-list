@@ -54,7 +54,7 @@
             <li class="list__item">
 
             <button class="js-done button">
-            ${task.done ? "✔" : " "}
+            ${task.done ? "✔" : ""}
             </button>   
              
             <button class="js-remove button button--remove">🗑️</button>
