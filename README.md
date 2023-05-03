@@ -12,7 +12,7 @@ This page allows you to manage the tasks you have to do.
 - HTML
 - CSS
 - JavaScript
-- BEM Technologies
+- BEM convention
 ### **How to use it ?** 
 
 - You can add your new task in the main panel.
