@@ -5,6 +5,8 @@
 
 This page allows you to manage the tasks you have to do.
 
+![lista-zadan](https://raw.githubusercontent.com/beataxamb/to-do-list/main/images/to-do-list-gif.gif)
+
 ### **Technologies used:**
 
 - HTML
