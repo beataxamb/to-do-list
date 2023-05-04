@@ -69,14 +69,13 @@
         const newTaskInput = document.querySelector(".js-newTask")
         const newTaskContent = newTaskInput.value.trim();
 
-        if (newTaskContent === "") {
-            newTaskInput.focus();
-            return;
-        } else {
-            newTaskInput.focus();
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
         }
 
-        addNewTask(newTaskContent);
+        newTaskInput.focus();
+        
+        newTaskInput.value = "";
     };
 
     const init = () => {
@@ -85,10 +84,6 @@
         const form = document.querySelector(".js-form")
 
         form.addEventListener("submit", onFormSubmit);
-
-        form.addEventListener("submit", () => {
-            form.reset();
-        });
     };
 
     init();
