@@ -23,6 +23,7 @@
     min-width: 30px;
     min-height: 30px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .button--remove {
