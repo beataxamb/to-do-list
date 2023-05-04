@@ -18,6 +18,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
     <link href="css/list.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
 </head>
@@ -28,15 +29,15 @@
     </header>
     <main class="main">
         <section class="main__section">
-            <h2 class="main__container">Dodaj nowe zadanie</h2>
-            <form class="main__container main__container--form js-form">
-                <input type="text" name="newTask" required autofocus placeholder="Co jest do zrobienia?" class="main__input js-newTask">
-                <button class="main__button">Dodaj zadanie</button>
+            <h2 class="main__header">Dodaj nowe zadanie</h2>
+            <form class="form js-form">
+                <input type="text" name="newTask" required autofocus placeholder="Co jest do zrobienia?" class="form__input js-newTask">
+                <button class="form__button">Dodaj zadanie</button>
             </form>
         </section>
         <section class="main__section">
-            <h2 class="main__container">Lista zadań</h2>
-            <ul class="main__container js-tasks"></ul>
+            <h2 class="main__header">Lista zadań</h2>
+            <ul class="list js-tasks"></ul>
         </section>
     </main>
 </body>

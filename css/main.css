@@ -10,34 +10,8 @@
     width: 100%;
 }
 
-.main__container {
+.main__header {
     margin: 2px;
     padding: 20px;
     background: white;
-}
-
-.main__container--form {
-    display: grid;
-    grid-template-columns: 1fr auto;
-}
-
-@media (max-width: 767px) {
-    .main__container--form {
-        grid-template-columns: 1fr;
-    }
-}
-
-.main__input {
-    border: 2px solid #eee;
-    padding: 10px;
-    margin: 10px;
-}
-
-.main__button {
-    border: 2px solid teal;
-    padding: 10px;
-    margin: 10px;
-    background-color: teal;
-    color: white;
-    cursor: pointer;
 }

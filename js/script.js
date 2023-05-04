@@ -44,11 +44,11 @@
             htmlString += `
             <li class="list__item">
 
-            <button class="js-done button">
+            <button class="js-done list__button">
             ${task.done ? "✔" : ""}
             </button>   
              
-            <button class="js-remove button button--remove">🗑️</button>
+            <button class="js-remove list__button list__button--remove">🗑️</button>
             
             <span
             class="${task.done ? " list__item--done" : ""}"

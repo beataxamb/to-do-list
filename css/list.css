@@ -1,3 +1,9 @@
+.list {
+    margin: 2px;
+    padding: 20px;
+    background: white;
+}
+
 .list__item {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -16,7 +22,7 @@
     text-decoration: line-through;
 }
 
-.button {
+.list__button {
     border: none;
     background-color: green;
     color: white;
@@ -26,7 +32,7 @@
     cursor: pointer;
 }
 
-.button--remove {
+.list__button--remove {
     background-color: red;
     grid-area: end;
 }
