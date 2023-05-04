@@ -9,6 +9,7 @@
     "start center end";
     border-bottom: 2px solid #eee;
     padding: 5px;
+    grid-gap: 5px;
 }
 
 .list__item--done {
