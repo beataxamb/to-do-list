@@ -17,7 +17,7 @@
     grid-gap: 5px;
 }
 
-.list__item--done {
+.list__item--toggleDone {
     text-decoration: line-through;
 }
 

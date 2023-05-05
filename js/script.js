@@ -51,7 +51,7 @@
             <button class="js-remove list__button list__button--remove">🗑️</button>
             
             <span
-            class="${task.done ? " list__item--done" : ""}"
+            class="${task.done ? " list__item--toggleDone" : ""}"
             >
             ${task.content}</span>
             </li>
