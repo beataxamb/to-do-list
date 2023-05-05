@@ -23,7 +23,6 @@
 
 .list__button {
     border: none;
-    background-color: green;
     color: white;
     min-width: 30px;
     min-height: 30px;
@@ -31,11 +30,15 @@
     cursor: pointer;
 }
 
-.list__button:hover {
+.list__button--toggleDone {
+    background-color: green;
+}
+
+.list__button--toggleDone:hover {
     background-color: hsl(120, 100%, 30%);
 }
 
-.list__button:active {
+.list__button--toggleDone:active {
     background-color: hsl(120, 100%, 35%);
 }
 
