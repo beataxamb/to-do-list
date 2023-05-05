@@ -26,3 +26,13 @@
     color: white;
     cursor: pointer;
 }
+
+.form__button:hover {
+    border: 2px solid hsl(180, 100%, 30%);
+    background-color: hsl(180, 100%, 30%);
+}
+
+.form__button:active {
+    border: 2px solid hsl(180, 100%, 35%);
+    background-color: hsl(180, 100%, 35%);
+}

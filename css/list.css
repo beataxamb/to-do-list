@@ -2,14 +2,13 @@
     margin: 2px;
     padding: 20px;
     background: white;
+    list-style: none;
 }
 
 .list__item {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    justify-items: start;
     align-items: center;
-    text-decoration: none;
     list-style: none;
     grid-template-areas: 
     "start center end";
@@ -36,6 +35,10 @@
     background-color: hsl(120, 100%, 30%);
 }
 
+.list__button:active {
+    background-color: hsl(120, 100%, 35%);
+}
+
 .list__button--remove {
     background-color: red;
     grid-area: end;
@@ -44,3 +47,8 @@
 .list__button--remove:hover {
     background-color: hsl(0, 100%, 65%);
 }
+
+.list__button--remove:active {
+    background-color: hsl(0, 100%, 70%);
+}
+
