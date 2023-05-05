@@ -2,12 +2,6 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 5px;
-    align-items: start;
-    justify-items: start;
-}
-
-.main__section {
-    width: 100%;
 }
 
 .main__header {

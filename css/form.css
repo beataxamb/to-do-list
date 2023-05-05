@@ -4,6 +4,7 @@
     background: white;
     display: grid;
     grid-template-columns: 1fr auto;
+    grid-gap: 10px;
 }
 
 @media (max-width: 767px) {
@@ -15,13 +16,11 @@
 .form__input {
     border: 2px solid #eee;
     padding: 10px;
-    margin: 10px;
 }
 
 .form__button {
     border: 2px solid teal;
     padding: 10px;
-    margin: 10px;
     background-color: teal;
     color: white;
     cursor: pointer;
