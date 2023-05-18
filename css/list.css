@@ -36,6 +36,7 @@
 
 .list__button--toggleDone:hover {
     background-color: hsl(120, 100%, 30%);
+    transition: 1s;
 }
 
 .list__button--toggleDone:active {
@@ -49,6 +50,7 @@
 
 .list__button--remove:hover {
     background-color: hsl(0, 100%, 65%);
+    transition: 1s linear;
 }
 
 .list__button--remove:active {
