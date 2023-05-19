@@ -19,46 +19,55 @@
         render();
     };
 
-    const bindEvents = () => {
+    const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove")
 
-        removeButtons.forEach((removeButton, index) => {
+        removeButtons.forEach((removeButton, taskIndex) => {
             removeButton.addEventListener("click", () => {
-                removeTask(index);
-            });
-        });
-
-        const toggleDoneButtons = document.querySelectorAll(".js-done")
-
-        toggleDoneButtons.forEach((toggleDoneButton, index) => {
-            toggleDoneButton.addEventListener("click", () => {
-                toggleTaskDone(index);
+                removeTask(taskIndex);
             });
         });
     };
 
-    const render = () => {
-        let htmlString = "";
+    const bindToggleDoneEvents = () => {
+        const toggleDoneButtons = document.querySelectorAll(".js-done")
+
+        toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
+            toggleDoneButton.addEventListener("click", () => {
+                toggleTaskDone(taskIndex);
+            });
+        });
+    };
+
+    const renderTasks = () => {
+
+        let tasksListHTMLContent = "";
 
         for (const task of tasks) {
-            htmlString += `
+            tasksListHTMLContent += `
             <li class="list__item">
-              <button class="js-done list__button list__button--toggleDone">
-                ${task.done ? "✔" : ""}
-              </button>   
-              <button class="js-remove list__button list__button--remove">
+                <button class="js-done list__button list__button--toggleDone">
+                    ${task.done ? "✔" : ""}
+                </button>   
+                <button class="js-remove list__button list__button--remove">
                 🗑️
-              </button>
-              <span class="${task.done ? " list__item--toggleDone" : ""}">
+                </button>
+                <span class="${task.done ? " list__item--toggleDone" : ""}">
                 ${task.content}
-              </span>
+                </span>
             </li>
             `;
         }
 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+        document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
+    };
 
-        bindEvents();
+    const render = () => {
+        renderTasks();
+
+
+        bindRemoveEvents();
+        bindToggleDoneEvents();
     };
 
     const onFormSubmit = (event) => {
@@ -72,7 +81,7 @@
         }
 
         newTaskInput.focus();
-        
+
         newTaskInput.value = "";
     };
 
