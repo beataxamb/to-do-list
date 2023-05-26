@@ -73,12 +73,44 @@
         document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
     };
 
+    const renderButtons = () => {
+
+        const allTasksCompleted = tasks.every(task => task.done);
+
+        const showButtons = `
+            <button class="js-doneAllTasksButton" ${allTasksCompleted ? "disabled" : ""} >Ukończ wszystkie</button>
+        `;
+
+        const hideButtons = ``;
+
+        const buttonsContent = tasks.length === 0 ? hideButtons : showButtons;
+
+        document.querySelector(".js-buttons").innerHTML = buttonsContent;
+
+
+     };
+
+    const bindButtonsEvents = () => { 
+        const doneAllTasksButton = document.querySelector(".js-doneAllTasksButton");
+
+        if (doneAllTasksButton) {
+            doneAllTasksButton.addEventListener("click", toggleAllTaskDone)
+        };
+    };  
+
+    const toggleAllTaskDone = () => {
+        tasks = tasks.map(task => ({ ...task, done: true}));
+
+        render();
+    };
+
     const render = () => {
         renderTasks();
-
+        renderButtons();
 
         bindRemoveEvents();
         bindToggleDoneEvents();
+        bindButtonsEvents();
     };
 
     const onFormSubmit = (event) => {
