@@ -10,8 +10,6 @@
     grid-template-columns: auto 1fr auto;
     align-items: center;
     list-style: none;
-    grid-template-areas: 
-    "start center end";
     border-bottom: 2px solid #eee;
     padding: 5px;
     grid-gap: 5px;
@@ -20,6 +18,11 @@
 .list__item--toggleDone {
     text-decoration: line-through;
 }
+
+.list__item--hideDone {
+    display: none;
+}
+
 
 .list__button {
     border: none;
@@ -45,7 +48,6 @@
 
 .list__button--remove {
     background-color: red;
-    grid-area: end;
 }
 
 .list__button--remove:hover {
@@ -56,4 +58,3 @@
 .list__button--remove:active {
     background-color: hsl(0, 100%, 70%);
 }
-
