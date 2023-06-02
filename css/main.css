@@ -8,4 +8,21 @@
     margin: 2px;
     padding: 20px;
     background: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.main__element {
+    margin-left: auto;
+}
+
+@media (max-width: 767px) {
+    .main__header {
+        grid-template-columns: 1fr;
+    }
+
+    .main__element {
+        justify-items: center;
+        width: 100%;
+    }
 }

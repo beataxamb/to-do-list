@@ -52,7 +52,7 @@
 
 .list__button--remove:hover {
     background-color: hsl(0, 100%, 65%);
-    transition: 1s linear;
+    transition: 1s;
 }
 
 .list__button--remove:active {
