@@ -57,7 +57,6 @@
         let tasksListHTMLContent = "";
 
         for (const task of tasks) {
-            if (!hideDoneTasks || !task.done) {
                 tasksListHTMLContent += `
                 <li class="list__item ${hideDoneTasks && task.done ? "list__item--hideDone" : ""}">
                     <button class="js-done list__button list__button--toggleDone">
@@ -71,19 +70,20 @@
                     </button>
                 </li>
                 `;
-            }
         }
 
         document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
     };
 
+    
     const renderButtons = () => {
 
         const allTasksCompleted = tasks.every(task => task.done);
+        const IsAnyTaskCompleted = tasks.some(task => task.done);
 
         const showButtons = `
-            <button class="js-hideShowDoneButton">${hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
-            <button class="js-doneAllTasksButton" ${allTasksCompleted ? "disabled" : ""} >Ukończ wszystkie</button>
+            <button class="button js-hideDoneButton">${hideDoneTasks && IsAnyTaskCompleted ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
+            <button class="button js-doneAllTasksButton" ${allTasksCompleted ? "disabled" : ""} >Ukończ wszystkie</button>
         `;
 
         const hideButtons = ``;
@@ -97,14 +97,14 @@
 
     const bindButtonsEvents = () => {
         const doneAllTasksButton = document.querySelector(".js-doneAllTasksButton");
-        const hideShowDoneButton = document.querySelector(".js-hideShowDoneButton");
+        const hideDoneButton = document.querySelector(".js-hideDoneButton");
 
         if (doneAllTasksButton) {
             doneAllTasksButton.addEventListener("click", toggleAllTaskDone)
         };
 
-        if (hideShowDoneButton) {
-            hideShowDoneButton.addEventListener("click", toggleHideDone)
+        if (hideDoneButton) {
+            hideDoneButton.addEventListener("click", toggleHideDone)
         };
     };
 
@@ -115,7 +115,9 @@
     };
 
     const toggleHideDone = () => {
-        hideDoneTasks = !hideDoneTasks;
+        const IsAnyTaskCompleted = tasks.some(task => task.done);
+        
+        IsAnyTaskCompleted ? hideDoneTasks = !hideDoneTasks : "";
 
         render();
     };
