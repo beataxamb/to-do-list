@@ -53,11 +53,10 @@
     };
 
     const renderTasks = () => {
-
         let tasksListHTMLContent = "";
 
         for (const task of tasks) {
-                tasksListHTMLContent += `
+            tasksListHTMLContent += `
                 <li class="list__item ${hideDoneTasks && task.done ? "list__item--hideDone" : ""}">
                     <button class="js-done list__button list__button--toggleDone">
                         ${task.done ? "✔" : ""}
@@ -75,11 +74,12 @@
         document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
     };
 
-    
-    const renderButtons = () => {
+    const IsAnyTaskCompleted = () => {
+        tasks.some(task => task.done);
+    };
 
+    const renderButtons = () => {
         const allTasksCompleted = tasks.every(task => task.done);
-        const IsAnyTaskCompleted = tasks.some(task => task.done);
 
         const showButtons = `
             <button class="button js-hideDoneButton">${hideDoneTasks && IsAnyTaskCompleted ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
@@ -91,8 +91,6 @@
         const buttonsContent = tasks.length === 0 ? hideButtons : showButtons;
 
         document.querySelector(".js-buttons").innerHTML = buttonsContent;
-
-
     };
 
     const bindButtonsEvents = () => {
@@ -115,8 +113,6 @@
     };
 
     const toggleHideDone = () => {
-        const IsAnyTaskCompleted = tasks.some(task => task.done);
-        
         IsAnyTaskCompleted ? hideDoneTasks = !hideDoneTasks : "";
 
         render();
