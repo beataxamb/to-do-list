@@ -13,21 +13,33 @@
     };
 
     const removeTask = (taskIndex) => {
-        tasks = [
-            ...tasks.slice(0, taskIndex),
-            ...tasks.slice(taskIndex + 1)
-        ];
+        // tasks = [
+        //     ...tasks.slice(0, taskIndex),
+        //     ...tasks.slice(taskIndex + 1)
+        // ];
+
+        //lub
+
+        tasks = tasks.filter((_, index) => index !== taskIndex);
 
         render();
     };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks = [
-            ...tasks.slice(0, taskIndex),
-            { ...tasks[taskIndex], done: !tasks[taskIndex].done },
-            ...tasks.slice(taskIndex + 1)
-        ];
+        // tasks = [
+        //     ...tasks.slice(0, taskIndex),
+        //     { ...tasks[taskIndex], done: !tasks[taskIndex].done },
+        //     ...tasks.slice(taskIndex + 1)
+        // ];
+        
+        //lub
 
+        tasks = tasks.map((task, index) => {
+            if (index === taskIndex) {
+                return { ...task, done: !task.done };
+            }
+            return task;
+        });
 
         render();
     };
@@ -57,14 +69,16 @@
 
         for (const task of tasks) {
             tasksListHTMLContent += `
-                <li class="list__item ${hideDoneTasks && task.done ? "list__item--hideDone" : ""}">
-                    <button class="js-done list__button list__button--toggleDone">
+                <li 
+                class="tasks__item ${hideDoneTasks && task.done ? "tasks__item--hideDone" : ""}"
+                >
+                    <button class="js-done tasks__button tasks__button--toggleDone">
                         ${task.done ? "✔" : ""}
                     </button>   
-                    <span class="${task.done ? " list__item--toggleDone" : ""}">
+                    <span class="${task.done ? " tasks__item--toggleDone" : ""}">
                     ${task.content}
                     </span>
-                    <button class="js-remove list__button list__button--remove">
+                    <button class="js-remove tasks__button tasks__button--remove">
                     🗑️
                     </button>
                 </li>
@@ -74,16 +88,17 @@
         document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
     };
 
-    const IsAnyTaskCompleted = () => {
-        tasks.some(task => task.done);
-    };
-
     const renderButtons = () => {
-        const allTasksCompleted = tasks.every(task => task.done);
+        const allTasksDone = tasks.every(task => task.done);
+        const IsAnyTaskDone = tasks.some(task => task.done);
 
         const showButtons = `
-            <button class="button js-hideDoneButton">${hideDoneTasks && IsAnyTaskCompleted ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
-            <button class="button js-doneAllTasksButton" ${allTasksCompleted ? "disabled" : ""} >Ukończ wszystkie</button>
+            <button class="button js-hideDoneButton">
+            ${hideDoneTasks && IsAnyTaskDone ? "Pokaż" : "Ukryj"} ukończone
+            </button>
+            <button class="button js-doneAllTasksButton" ${allTasksDone ? "disabled" : ""}>
+            Ukończ wszystkie
+            </button>
         `;
 
         const hideButtons = ``;
@@ -113,7 +128,7 @@
     };
 
     const toggleHideDone = () => {
-        IsAnyTaskCompleted ? hideDoneTasks = !hideDoneTasks : "";
+        hideDoneTasks = !hideDoneTasks;
 
         render();
     };

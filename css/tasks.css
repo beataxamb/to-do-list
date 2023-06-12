@@ -1,11 +1,11 @@
-.list {
+.tasks {
     margin: 2px;
     padding: 20px;
     background: white;
     list-style: none;
 }
 
-.list__item {
+.tasks__item {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -15,16 +15,16 @@
     grid-gap: 5px;
 }
 
-.list__item--toggleDone {
+.tasks__item--toggleDone {
     text-decoration: line-through;
 }
 
-.list__item--hideDone {
+.tasks__item--hideDone {
     display: none;
 }
 
 
-.list__button {
+.tasks__button {
     border: none;
     color: white;
     min-width: 30px;
@@ -34,27 +34,27 @@
     transition: 1s;
 }
 
-.list__button--toggleDone {
+.tasks__button--toggleDone {
     background-color: green;
 }
 
-.list__button--toggleDone:hover {
+.tasks__button--toggleDone:hover {
     background-color: hsl(120, 100%, 30%);
 
 }
 
-.list__button--toggleDone:active {
+.tasks__button--toggleDone:active {
     background-color: hsl(120, 100%, 35%);
 }
 
-.list__button--remove {
+.tasks__button--remove {
     background-color: red;
 }
 
-.list__button--remove:hover {
+.tasks__button--remove:hover {
     background-color: hsl(0, 100%, 65%);
 }
 
-.list__button--remove:active {
+.tasks__button--remove:active {
     background-color: hsl(0, 100%, 70%);
 }
