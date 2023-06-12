@@ -9,20 +9,13 @@
     padding: 20px;
     background: white;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.main__element {
-    margin-left: auto;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
 }
 
 @media (max-width: 767px) {
     .main__header {
         grid-template-columns: 1fr;
-    }
-
-    .main__element {
-        justify-items: center;
-        width: 100%;
+        justify-content: center;
     }
 }

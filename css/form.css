@@ -24,13 +24,13 @@
     background-color: teal;
     color: white;
     cursor: pointer;
+    transition: 1s;
 }
 
 .form__button:hover {
     border: 2px solid hsl(180, 100%, 30%);
     background-color: hsl(180, 100%, 30%);
     transform: scale(1.03);
-    transition: 1s;
 }
 
 .form__button:active {
