@@ -8,7 +8,7 @@
     <title>Lista zadań</title>
     <link rel="icon" href="https://raw.githubusercontent.com/beataxamb/to-do-list/main/images/mark-green-check.png">
     <meta property="og:image"
-        content="https://raw.githubusercontent.com/beataxamb/to-do-list/main/images/to-do-list-image.JPG">
+        content="https://raw.githubusercontent.com/beataxamb/to-do-list/main/images/to-do-list-image.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,21 +17,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/header.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
     <link href="css/tasks.css" rel="stylesheet">
     <link href="css/button.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
 </head>
 
 <body>
     <main class="main">
         <header>
-            <h1 class="header">Lista zadań</h1>
+            <h1>Lista zadań</h1>
         </header>
         <section>
-            <h2 class="main__header">Dodaj nowe zadanie</h2>
+            <h2 class="section">Dodaj nowe zadanie</h2>
             <form class="form js-form">
                 <input type="text" name="newTask" required autofocus placeholder="Co jest do zrobienia?"
                     class="form__input js-newTask">
@@ -39,7 +39,7 @@
             </form>
         </section>
         <section>
-            <h2 class="main__header">Lista zadań <span class="js-buttons"></span> </h2>
+            <h2 class="section">Lista zadań <span class="js-buttons"></span> </h2>
             <ul class="tasks js-tasks"></ul>
         </section>
     </main>

@@ -1,0 +1,15 @@
+.section {
+    margin: 2px;
+    padding: 20px;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .section {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+}
